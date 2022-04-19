@@ -1,7 +1,6 @@
 <?php
     $paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
         $word = $_GET["word"];
-
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +12,23 @@
     <title>Badwords php</title>
 </head>
 <body>
-    <p> <?php echo str_replace($word, "***", $paragraph) ?> </p>
-    <p>La lunghezza del paragrafo è di <?php echo strlen(str_replace($word, "***", $paragraph)) ?> tra caratteri e spazi.</p>
+    <h2>
+        Paragrafo originale
+    </h2>
+    <p>
+        <?php echo $paragraph ?> 
+    </p>
+    <p> 
+        <?php print "La lunghezza originale del paragrafo è di " . strlen($paragraph) . " tra caratteri e spazi." ?> 
+    </p>
+
+    <h2>
+        Paragrafo modificato
+    </h2>    
+    <p> 
+        <?php echo str_replace($word, "***", $paragraph) ?> 
+    </p>
+    <p>La lunghezza del paragrafo modificato è di <?php echo strlen(str_replace($word, "***", $paragraph)) ?> tra caratteri e spazi.</p>
     <p>La parola sostituita è "<?php echo $word ?>".</p>
 </body>
 </html>
