@@ -13,8 +13,9 @@
     <title>Badwords php</title>
 </head>
 <body>
+    <pre>Prova</pre>
     <p> <?php echo str_replace($word, "***", $paragraph) ?> </p>
-    <p>La lunghezza del paragrafo è di <?php echo strlen($paragraph) ?> tra caratteri e spazi.</p>
+    <p>La lunghezza del paragrafo è di <?php echo strlen(str_replace($word, "***", $paragraph)) ?> tra caratteri e spazi.</p>
     <p>La parola sostituita è "<?php echo $word ?>".</p>
 </body>
 </html>
